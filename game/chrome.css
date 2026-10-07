@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #202020; font-family: Arial, sans-serif; }
+body { display: flex; flex-direction: column; }
+button { font: inherit; color: inherit; border: 0; background: transparent; cursor: pointer; }
+#chrome { position: relative; flex: 0 0 auto; width: 100%; aspect-ratio: 2559 / 86; user-select: none; container-type: inline-size; }
+.chrome-reference { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+#tab-title, #address-text { position: absolute; display: flex; align-items: center; overflow: hidden; white-space: nowrap; font-family: "Segoe UI", sans-serif; font-weight: 400; letter-spacing: normal; }
+#tab-title { left: 2.83%; top: 9.3%; width: 6.6%; height: 28%; background: #3c3c3c; color: #d8d8d8; display: block; line-height: 1.85; text-overflow: ellipsis; }
+#tab-title { font-size: .508cqw; }
+#address-text { left: 6.17%; top: 52.3%; width: 82.25%; height: 37.2%; background: #282828; color: #9aa0a6; font-size: .547cqw; line-height: 1; }
+#address-text .address-domain { color: #e8eaed; }
+#chrome button { position: absolute; border-radius: 3px; }
+#chrome button:hover { background: #ffffff12; }
+#chrome button:focus-visible { outline: 1px solid #83d8ff; }
+#back, #forward, #reload { top: 47%; width: 1.35%; height: 47%; }
+#back { left: .28%; } #forward { left: 1.67%; } #reload { left: 3.1%; }
+#minimize, #fullscreen, #exit-fullscreen { top: 0; width: 1.8%; height: 46%; }
+#minimize { right: 3.6%; } #fullscreen { right: 1.8%; } #exit-fullscreen { right: 0; }
+#chrome #exit-fullscreen:hover { background: #c42b1c66; }
+#startup-backdrop { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; z-index: 0; }
+#chrome, #game { position: relative; z-index: 1; }
+#game { display: block; width: 100%; flex: 1 1 0; min-height: 0; border: 0; background: transparent; }
+body.compact #chrome { display: none; }
+#restore { position: fixed; top: 4px; right: 8px; z-index: 10; background: #303237; color: white; border-radius: 50%; width: 26px; height: 26px; }
+#restore[hidden] { display: none; }
+@media(max-width:600px) {
+  #chrome { height: 40px; aspect-ratio: auto; background: #282828; }
+  .chrome-reference,#tab-title,#minimize,#fullscreen,#exit-fullscreen { display: none; }
+  #address-text { left: 96px !important; top: 0 !important; height: 40px !important; width: calc(100% - 104px); font-size: 13px !important; }
+  #back,#forward,#reload { top: 0; width: 30px; height: 40px; color: #aaa; font-size: 18px; }
+  #back { left: 2px; } #forward { left: 33px; } #reload { left: 64px; }
+  #back::before { content: '←'; } #forward::before { content: '→'; } #reload::before { content: '↻'; }
+}

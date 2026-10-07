@@ -1,0 +1,68 @@
+#demo-modal { width: min(54rem, calc(100vw - 3.2rem)); max-width: 54rem; padding: 0; background: #252525; color: white; border: 1px solid #454545; box-shadow: 0 20px 80px #0008; font-family: "Sofia Sans", sans-serif; }
+#demo-modal .caser-dialog-header { display: flex; align-items: center; justify-content: space-between; padding: 2.4rem 3rem; background: #292929; border-bottom: 1px solid #ffffff0d; }
+#demo-modal h2 { margin: 0; font: 500 2.6rem "Oswald", sans-serif; text-transform: uppercase; }
+#demo-modal #modal-close { padding: .4rem; color: #aaa; cursor: pointer; }
+#demo-modal #modal-close:hover { color: white; }
+#demo-modal .caser-dialog-body { padding: 2.8rem 3rem 3rem; }
+#demo-modal p { margin: 0 0 2.4rem; color: #aaa; font-size: 1.6rem; line-height: 1.5; }
+.caser-admin-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.caser-admin-actions button { min-height: 5rem; padding: 1.2rem; font: 700 1.6rem "Sofia Sans", sans-serif; cursor: pointer; transition: background .15s, border-color .15s; }
+.caser-admin-deposit { color: #44c987; border: 1px solid #44c98780; background: #13432c; box-shadow: inset 0 0 2rem #44c98722; }
+.caser-admin-deposit:hover { background: #1d5a3a; border-color: #44c987; }
+.caser-admin-reset { grid-column: 1 / -1; color: #ddd; border: 1px solid #ffffff1f; background: #191919; }
+.caser-admin-reset:hover { background: #322323; border-color: #ff666680; color: #ff9999; }
+.caser-settings-preference { margin-top: 2.4rem; padding-top: 2rem; border-top: 1px solid #ffffff14; display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; color: #aaa; font-size: 1.5rem; }
+#settings-browser { padding: .9rem 1.3rem; background: #161616; color: #aaa; border: 1px solid #ffffff20; cursor: pointer; white-space: nowrap; }
+#settings-browser[aria-pressed="true"] { color: #44c987; border-color: #44c98780; background: #13432c; }
+@media(max-width:600px) { #demo-modal .caser-dialog-header, #demo-modal .caser-dialog-body { padding: 2rem; } .caser-settings-preference { flex-wrap: wrap; } }
+#demo-modal { max-height: calc(100dvh - 3.2rem); overflow-y: auto; }
+#demo-modal { position: fixed; inset: 0; margin: auto; }
+.caser-profile-settings { display: flex; flex-direction: column; gap: .8rem; margin-bottom: 2.4rem; padding-bottom: 2.4rem; border-bottom: 1px solid #ffffff20; }
+.caser-profile-settings h3 { margin: 0 0 1rem; font: 400 2.4rem "Oswald",sans-serif; color: white; }
+.caser-profile-settings > label { margin-top: .8rem; font-size: 1.6rem; color: #ccc; }
+.caser-profile-settings > input { width: 100%; padding: 1rem 1.3rem; color: white; background: #191919; border: 1px solid #ffffff25; font: 600 1.6rem "Sofia Sans",sans-serif; }
+.caser-profile-settings > input:focus { outline: none; border-color: #83d8ff; }
+.caser-profile-settings > button { padding: 1.2rem; font: 700 1.6rem "Sofia Sans",sans-serif; cursor: pointer; }
+.profile-settings-avatar { display: flex; gap: 1.6rem; align-items: center; }
+.profile-settings-avatar > img { width: 8rem; height: 8rem; object-fit: cover; border: 1px solid #ffffff30; }
+.profile-settings-avatar > div { display: flex; flex-direction: column; gap: 1rem; }
+.profile-avatar-upload, #settings-avatar-reset { display: block; padding: .9rem 1.3rem; border: 1px solid #ffffff30; background: #191919; font: 500 1.5rem "Sofia Sans",sans-serif; color: #ddd; cursor: pointer; }
+#settings-avatar-file { width: 1px; height: 1px; position: absolute; opacity: 0; }
+.profile-avatar-upload:hover, #settings-avatar-reset:hover { border-color: #83d8ff; color: #83d8ff; }
+#demo-modal .profile-settings-rating { margin: .8rem 0; color: #aaa; font-size: 1.3rem; }
+#demo-modal #settings-profile-status { margin: 0; min-height: 1.8rem; color: #83d8ff; font-size: 1.3rem; }
+.caser-admin-balance { margin-bottom: 2rem; }
+.caser-admin-balance label { display: block; margin-bottom: .8rem; color: #ddd; font-size: 1.6rem; }
+.caser-admin-balance > div { display: flex; gap: 1rem; }
+.caser-admin-balance input { flex: 1; width: 0; min-width: 0; padding: 1rem 1.3rem; color: white; background: #191919; border: 1px solid #ffffff25; font: 600 1.6rem "Sofia Sans"; }
+.caser-admin-balance input:focus { outline: none; border-color: #44c987; }
+.caser-admin-balance button { padding: 1rem 1.5rem; font: 700 1.6rem "Sofia Sans"; cursor: pointer; }
+.caser-admin-switches { display: flex; flex-direction: column; gap: 1.4rem; margin-bottom: 2rem; padding: 2rem 0; border-top: 1px solid #ffffff14; border-bottom: 1px solid #ffffff14; }
+.caser-admin-switches label { display: flex; align-items: center; gap: 1rem; color: #ddd; font-size: 1.6rem; cursor: pointer; }
+.caser-admin-switches input { appearance: auto; width: 1.8rem; height: 1.8rem; flex-shrink: 0; accent-color: #44c987; cursor: pointer; }
+.caser-admin-switches small { margin: -.6rem 0 0 2.8rem; color: #999; font-size: 1.3rem; line-height: 1.4; }
+#caser-rating-dialog { width: 650px; max-width: calc(100vw - 24px); max-height: calc(100dvh - 24px); padding: 0; border: 0; background: #141414; color: #eee; overflow-y: auto; font-family: "Sofia Sans", sans-serif; box-shadow: 0 20px 80px #0009; }
+#caser-rating-dialog { position: fixed; inset: 0; margin: auto; }
+#caser-rating-dialog::backdrop { background: #0009; }
+#caser-rating-dialog header { height: 78px; padding: 0 20px; background: #272727; display: flex; align-items: center; justify-content: space-between; }
+#caser-rating-dialog h2 { margin: 0; font: 400 24px "Oswald", sans-serif; color: #fff; }
+#caser-rating-dialog header button { color: #999; padding: 5px; cursor: pointer; }
+#caser-rating-dialog header button:hover { color: white; }
+#caser-rating-dialog header svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 5; }
+.rating-dialog-content { padding: 32px 41px; }
+.rating-dialog-content p { margin: 0 0 26px; font-size: 18px; font-weight: 500; line-height: 25px; }
+.rating-levels { margin-top: 34px; border: 1px solid #303030; }
+.rating-level { display: grid; grid-template-columns: 1fr 1.05fr 124px; align-items: center; gap: 10px; min-height: 83.5px; padding: 12px 22px; border-bottom: 1px solid #303030; background: linear-gradient(110deg,color-mix(in srgb,var(--rating-color) 23%,transparent),transparent 60%); }
+.rating-level:last-child { border-bottom: 0; }
+.rating-level-name { font: 400 22px "Oswald",sans-serif; color: var(--rating-color); }
+.rating-level-range { color: #ccc; font-size: 18px; font-weight: 500; white-space: nowrap; }
+.rating-level-badge { position: relative; width: 124px; height: 40px; }
+.rating-level-badge svg { width: 100%; height: 100%; filter: drop-shadow(0 4px 4px #0007); }
+.rating-level-badge > span { position: absolute; inset: 0 0 0 18px; display: flex; align-items: baseline; justify-content: center; padding-top: 4px; color: var(--rating-color); font-style: italic; font-weight: 800; text-shadow: 0 1px 2px #0008; }
+.rating-level-badge b { font-size: 30px; line-height: 32px; }
+.rating-level-badge small { font-size: 18px; }
+#caser-rating-dialog footer { display: flex; justify-content: flex-end; padding: 11px 16px; background: #272727; }
+#caser-rating-dialog footer button { padding: 10px 16px; background: #303030; font: 400 24px "Oswald",sans-serif; color: white; cursor: pointer; }
+#caser-rating-dialog footer button:hover { background: #3c3c3c; }
+@media(max-width:600px) { .rating-dialog-content { padding: 24px 18px; } .rating-level { grid-template-columns: .8fr 1.15fr 88px; gap: 6px; padding: 12px 10px; } .rating-level-name { font-size: 17px; } .rating-level-range { font-size: 14px; } .rating-level-badge { width: 88px; height: 32px; } .rating-level-badge b { font-size: 22px; line-height: 24px; } .rating-level-badge small { font-size: 13px; } }
+#demo-modal #settings-admin-status { margin: 0; min-height: 1.8rem; font-size: 1.3rem; color: #83d8ff; }
